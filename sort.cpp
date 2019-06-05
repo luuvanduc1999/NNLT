@@ -30,11 +30,11 @@ for(i=1; i<n; i++)
 }
 //========================
 Quick Sort
-void QS(int L, int H)
+void QS(int L, int R)
 {
     int i=L;
-    int j=H;
-    int x=a[(L+H)/2];
+    int j=R;
+    int x=a[(L+R)/2];
     
     do
     {
@@ -42,7 +42,7 @@ void QS(int L, int H)
         while (a[j]>x) j--;
         if (i<=j)
         {
-            Swap(a[i],a[j]);
+            swap(a[i],a[j]);
             i++;
             j--;
         }
@@ -50,5 +50,5 @@ void QS(int L, int H)
     while (i<=j);
     
     if (L<j) QS(L,j);
-    if (i<H) QS(i,H);
+    if (i<R) QS(i,R);
 }
