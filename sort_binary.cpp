@@ -52,3 +52,14 @@ void QS(int L, int R)
     if (L<j) QS(L,j);
     if (i<R) QS(i,R);
 }
+//============================
+L=0; R=n-1;
+while (L<R) do
+{
+	k=(L+R)/2;
+	if (a[k]==X) 
+		return(k);
+	if (a[k]<X) L=k+1;
+	else R=k-1;
+}
+Return(-1);
