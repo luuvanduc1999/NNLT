@@ -1,3 +1,34 @@
+#include&lt;iostream&gt;
+using namespace std;
+
+struct Node
+{
+    int data;
+    Node* next;
+};
+class list
+{
+private:
+    Node* firstnode;
+public:
+    void Init()
+    {
+        firstnode = new Node;
+        firstnode = NULL;
+    }
+    void List_Add(int data);
+    void List_InsertAfter(Node* node, int data);
+    void List_RemoveFirst();
+    void List_RemoveAfter(Node* node);
+    void List_DeleteAll();
+    int List_Length();
+    void List_Display();
+    Node* List_Search(int data);
+
+};
+
+//===================================================
+
 
 #include<iostream>
 using namespace std;
